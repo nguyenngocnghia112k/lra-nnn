@@ -4,8 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Danhmuc;
 use Illuminate\Http\Request;
-use Str;
-
+use Illuminate\Support\Str;
 class DanhmucController extends Controller
 {
     public function index()

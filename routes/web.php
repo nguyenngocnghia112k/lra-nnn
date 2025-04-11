@@ -8,6 +8,9 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\SanphamController;
+use App\Http\Controllers\ThuonghieuController;
+use App\Models\Thuonghieu;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,6 +71,26 @@ Route::middleware('auth')->group(function () {
         Route::get('edit/{id}', 'edit')->name('danhmuc.edit');
         Route::post('edit/{id}', 'update')->name('danhmuc.update');
         Route::get('delete/{id}', 'delete')->name('danhmuc.delete');
+
+    });
+    Route::controller(ThuonghieuController::class)->prefix('thuonghieu')->group(function(){
+        Route::get('', 'index')->name('thuonghieu');
+        Route::get('add', 'add')->name('thuonghieu.add');
+        Route::post('add', 'save')->name('thuonghieu.save');
+        Route::get('edit/{id}', 'edit')->name('thuonghieu.edit');
+        Route::post('edit/{id}', 'update')->name('thuonghieu.update');
+        Route::get('delete/{id}', 'delete')->name('thuonghieu.delete');
+
+    });
+
+    Route::controller(SanphamController::class)->prefix('sanpham')->group(function(){
+        Route::get('', 'index')->name('sanpham');
+        Route::get('view/{id}', 'view')->name('sanpham.view');
+        Route::get('add', 'add')->name('sanpham.add');
+        Route::post('add', 'save')->name('sanpham.save');
+        Route::get('edit/{id}', 'edit')->name('sanpham.edit');
+        Route::post('edit/{id}', 'update')->name('sanpham.update');
+        Route::get('delete/{id}', 'delete')->name('sanpham.delete');
 
     });
 

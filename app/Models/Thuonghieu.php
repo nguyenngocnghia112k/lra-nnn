@@ -8,4 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Thuonghieu extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'slug',
+        'order',
+        'logo',
+        'website',
+        'status',
+    ];
 }

@@ -51,6 +51,7 @@
                     </nav>
                 </div>
                 <div class="sb-sidenav-menu-heading">Chức năng chính </div>
+                <!-- Vùng danh mục -->
                 <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseDanhmuc" aria-expanded="false" aria-controls="collapseDanhmuc">
                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                     Danh mục 
@@ -62,6 +63,32 @@
                         <a class="nav-link" href="{{ route('danhmuc.add') }}">Thêm Danh mục </a>
                     </nav>
                 </div>
+                <!-- Vùng thương hiệu -->
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseThuonghieu" aria-expanded="false" aria-controls="collapseDanhmuc">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    Thương hiệu
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseThuonghieu" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="{{ route('thuonghieu') }}">Tất cả Thương hiệu </a>
+                        <a class="nav-link" href="{{ route('thuonghieu.add') }}">Thêm Thương hiệu </a>
+                    </nav>
+                </div>
+
+                <!-- Vùng sản phẩm -->
+                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseSanpham" aria-expanded="false" aria-controls="collapseDanhmuc">
+                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                    Sản phẩm
+                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                </a>
+                <div class="collapse" id="collapseSanpham" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                    <nav class="sb-sidenav-menu-nested nav">
+                        <a class="nav-link" href="{{ route('sanpham') }}">Tất cả Sản phẩm </a>
+                        <a class="nav-link" href="{{ route('sanpham.add') }}">Thêm Sản phẩm </a>
+                    </nav>
+                </div>
+
             </div>
         </div>
         <div class="sb-sidenav-footer">
