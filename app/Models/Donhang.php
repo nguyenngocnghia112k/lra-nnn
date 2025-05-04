@@ -18,5 +18,5 @@ class Donhang extends Model
         'giamgia',
         'trangthai'
 
-    ]
+    ];
 }

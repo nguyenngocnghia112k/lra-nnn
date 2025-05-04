@@ -34,7 +34,14 @@
       </div>
 
       <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.954342044648!2d106.675257175838!3d10.738002459899601!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x674d5126513db295!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgU8OgaSBHw7Ju!5e0!3m2!1svi!2s!4v1745164779351!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.954410425893!2d106.67525717480439!3d10.73799718940847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f62a90e5dbd%3A0x674d5126513db295!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgU8OgaSBHw7Ju!5e0!3m2!1svi!2s!4v1744328410278!5m2!1svi!2s" 
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
       </div>
     </section>
     <!---- newletter section start -->
@@ -42,7 +49,7 @@
     <!-- form contact -->
     <section id="form-contact">
       <form action="">
-        <span>Gởi tin nhắn đến chúng tôi</span>
+        <span>Gửi tin nhắn đến chúng tôi</span>
         <h2>Rất vui khi nhận phản hồi từ bạn</h2>
         <input type="text" placeholder="Tên của bạn" />
         <input type="text" placeholder="Email" />
@@ -55,22 +62,33 @@
         <div>
           <img src="img/people/1.png" alt="" />
           <p>
+
             <span>Nguyễn Ngọc Nghĩa </span> Dev in FullStack
+
+
             <br />
             Phone: 0388672807 
             <br />
             Email: nguyenngocnghia112k@gmail.com
+            Email: congnguyen@gmail.com
           </p>
         </div>
 
         <div>
           <img src="img/people/2.png" alt="" />
           <p>
+
             <span>Nguyễn Văn Công </span> Dev in FullStack
             <br />
             Phone: 098832324342
             <br />
             Email: vancongnguyen@gmail.com
+
+            <span>Nguyễn Ngọc Nghĩa </span> Dev in FullStack
+            <br />
+            Phone: 098832324342
+            <br />
+            Email: nguyenngocnghia@gmail.com
           </p>
         </div>
 

@@ -14,5 +14,5 @@ class ChitietDonhang extends Model
         'soluong',
         'gia',
         'ghichu'
-    ]
+    ];
 }

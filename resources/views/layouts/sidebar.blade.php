@@ -87,5 +87,12 @@
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+=======
+        <!-- <div class="sb-sidenav-footer">
+            <div class="small">Logged in as:</div>
+            Start Bootstrap
+        </div> -->
+>>>>>>> bb0b3c582e6d5cb578532711a69bf34e915fce5e
     </nav>
 </div>
