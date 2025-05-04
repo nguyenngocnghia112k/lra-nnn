@@ -1,0 +1,62 @@
+#dataTable {
+    font-size: 15px; /* Thu nhỏ toàn bộ chữ */
+  }
+  
+  #dataTable th,
+  #dataTable td {
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+  /* Đường kẻ giữa các hàng */
+#dataTable td, 
+#dataTable th {
+  border: 1px solid #dee2e6 !important;
+}
+  
+  /* Cột Tên khách hàng - thu nhỏ */
+  #dataTable td:nth-child(2),
+  #dataTable th:nth-child(2) {
+    max-width: 110px;
+    width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  /* Cột Email - thu nhỏ hơn */
+#dataTable td:nth-child(3),
+#dataTable th:nth-child(3) {
+  max-width: 130px;
+  width: 130px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/* Thu nhỏ cột Số điện thoại */
+#dataTable td:nth-child(4),
+#dataTable th:nth-child(4) {
+  max-width: 80px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+  
+/* Tăng kích thước cột Địa chỉ */
+#dataTable td:nth-child(5),
+#dataTable th:nth-child(5) {
+  min-width: 200px;
+  white-space: normal;
+  word-break: break-word;
+}
+
+  /* Thu nhỏ cột Thời gian đặt hàng */
+#dataTable td:nth-child(7),
+#dataTable th:nth-child(7) {
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+  

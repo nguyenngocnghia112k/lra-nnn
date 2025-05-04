@@ -1,67 +1,56 @@
 @extends('layouts.app')
- 
-@section('title', 'Data product')
- 
+
+@section('title', 'Data Product')
+
 @section('contents')
-  <div class="card shadow mb-4">
-    <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Data product</h6>
-    </div>
-    <div class="card-body">
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Data Product</h6>
+  </div>
+  <div class="card-body">
+    @if (auth()->user()->level == 'Admin')
+      <a href="{{ route('products.add') }}" class="btn btn-primary mb-3">Add Product</a>
+    @endif
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Code Product</th>
+            <th>Name Product</th>
+            <th>Category</th>
+            <th>Price</th>
             @if (auth()->user()->level == 'Admin')
-      <a href="{{ route('products.add') }}" class="btn btn-primary mb-3">Add product</a>
+            <th>Action</th>
             @endif
-      <div class="table-responsive">
-        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-          <thead>
-            <tr>
-              <th>No</th>
-              <th>code product</th>
-              <th>name product</th>
-              <th>Category</th>
-              <th>Price</th>
-                            @if (auth()->user()->level == 'Admin')
-              <th>Action</th>
-                            @endif
-            </tr>
-          </thead>
-          <tbody>
-            @php($no = 1)
-            @foreach ($data as $row)
-              <tr>
-                <th>{{ $no++ }}</th>
-                <td>{{ $row->item_code }}</td>
-                <td>{{ $row->productname }}</td>
-                <td>{{ $row->category }}</td>
-                <td>{{ $row->price }}</td>
-                                @if (auth()->user()->level == 'Admin')
-                <td>
-                  <a href="{{ route('products.edit', $row->id) }}" class="btn btn-warning">Edit</a>
-                  <a href="{{ route('products.delete', $row->id) }}" class="btn btn-danger">Delete</a>
-                </td>
-                                @endif
-              </tr>
-            @endforeach
-          </tbody>
-        </table>
-      </div>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
     </div>
   </div>
-
-  <script>
-    $(function(){
-      var table = $('#dataTable').DataTable({
-        processing: true,
-        serverSide: true,
-        ajax: "{{route('products')}}",
-        columns: [
-          {colum: 'DT_RowIndex', name: 'DT_RowIndex'},
-          {colum: 'item_code', name: 'item_code'},
-          {colum: 'productname', name: 'productname'},
-          {colum: 'category', name: 'category'},
-          {colum: 'price', name: 'price'},
-        ]
-      });
-    })
-  </script>
+</div>
 @endsection
+
+@push('scripts')
+<script>
+$(function(){
+  $('#dataTable').DataTable({
+    processing: true,
+    serverSide: true,
+    ajax: "{{ route('products') }}",
+    columns: [
+      {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+      {data: 'item_code', name: 'item_code'},
+      {data: 'productname', name: 'productname'},
+      {data: 'category', name: 'category'},
+      {data: 'price', name: 'price'},
+      @if (auth()->user()->level == 'Admin')
+      {data: 'action', name: 'action', orderable: false, searchable: false},
+      @endif
+    ]
+  });
+});
+</script>
+@endpush

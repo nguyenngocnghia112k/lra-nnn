@@ -198,6 +198,68 @@ body {
 
 #product1 {
   text-align: center;
+  display: flex;
+}
+#product1 .danhmuc ul{
+  list-style: none;
+}
+
+#product1 .danhmuc ul li{
+  padding: 10px 12px;
+}
+
+#product1 .danhmuc ul li:hover{
+  background-color: orange;
+}
+
+#product1 .danhmuc ul li a{
+  text-decoration: none;
+  padding: 15px;
+}
+
+#tongsoluong{
+  color: white;
+  background-color: red;
+  padding-left: 4px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-top: -34px;
+  position: relative;
+  top: -8px;
+  left: -4px;
+  padding-right: 4px;
+  padding-right: 4px;
+}
+
+.danhmuc{
+  text-align: left;
+  margin-top: 22px;
+  margin-right: 40px;
+  border: 1px dotted cadetblue;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  min-width: 250px;
+}
+
+.danhmucnull .title{
+  width: 100%;
+  max-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #05198c;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.danhmuc .title{
+  padding: 20px;
+  color: white;
+  background-color: blue;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 #product1 .pro-container {
@@ -219,6 +281,220 @@ body {
   transition: 0.2s ease;
   position: relative;
 }
+.container {
+  width: 75%;
+  float: right;
+  padding: 20px;
+}
+.container h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.container img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+.productdetail {
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+}
+.productdetail .content h5 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+.productdetail .content h5:first-of-type {
+  color:#1361ca; 
+  font-size: 28px; 
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.product-wrapper .productdetail .content {
+  text-align: left;         
+  font-weight: bold;      
+  color: black;          
+  font-size: 18px;       
+  margin-bottom: 10px;      
+}
+
+
+.productdetail .content h4 {
+  color: #e74c3c;
+  font-size: 24px;
+  margin: 10px 0;
+}
+.productdetail .star {
+  color: #f39c12;
+  margin: 10px 0;
+}
+
+.productdetail .cart {
+  color: white;
+  background: #ff523b;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.productdetail .cart:hover {
+  background: #e74c3c;
+}
+
+#newsletter {
+  background: #333;
+  color: white;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#newsletter .newstext h4 {
+  font-size: 24px;
+}
+
+#newsletter .newstext span {
+  color: #f39c12;
+}
+
+#newsletter .form input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+#newsletter .form .normal {
+  background: #f39c12;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+#newsletter .form .normal:hover {
+  background: #d35400;
+}
+/* Flex layout cho hình ảnh và thông tin bên phải */
+.product-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.product-wrapper img {
+  flex: 1 1 300px;
+  max-width: 400px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.productdetail {
+  flex: 1 1 400px;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.productdetail .content h5 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.productdetail .content h4 {
+  color: #e74c3c;
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.productdetail .star {
+  color: #f39c12;
+  margin-bottom: 10px;
+}
+
+.productdetail .cart {
+  color: white;
+  background: #ff523b;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.productdetail .cart:hover {
+  background: #e74c3c;
+}
+
+/* Mô tả ở dưới */
+.product-description {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  border-top: 1px solid #ccc;
+}
+.product-description {
+
+  color: black;              
+  font-weight: bold;         
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: left;      
+}
+
+.product-description h2 {
+  background-color: red;      /* Nền đỏ */
+  color: black;               /* Chữ đen */
+  font-weight: bold;          /* In đậm */
+  display: inline-block;      /* Chỉ chiếm chiều rộng theo chữ */
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+.product-description h5 {
+  font-weight: bold;              
+  color: #e74c3c;       
+  font-size: 18px;        
+  letter-spacing: 1px;           
+  padding: 5px 10px;       
+  border-radius: 5px;         
+  display: inline-block;    
+  margin-top: 10px;
+}
+
+
+
+#product1 .container.row {
+  margin-left: 30px;
+}
+
+#product1 .container.row h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#product1 .container.row img {
+  width: 10%;
+  border-radius: 20px;
+}
+
+#product1 .container .productdetail {
+  margin-right: 30px;
+}
 
 #product1 .pro:hover {
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
@@ -228,6 +504,42 @@ body {
   width: 100%;
   border-radius: 20px;
 }
+.soluong-wrapper label {
+  font-weight: bold;      
+  font-size: 22px;        
+  color: #000000;          
+  margin-right: 8px;       
+}
+.soluong-wrapper .soluong-input {
+  width: 100px;        
+  height: 35px;       
+  font-size: 16px;      
+  padding: 5px 10px;   
+}
+
+
+  .quantity-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .qty-input {
+    width: 60px;
+    height: 35px;
+    font-size: 16px;
+    text-align: center;
+  }
+  .btn-decrease, .btn-increase {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+
+
 
 #product1 .pro .des {
   text-align: start;
@@ -568,12 +880,35 @@ footer a:hover {
   color: white;
 }
 
-#pagination {
+#pagination, 
+pagination {
   color: white;
 }
 
-#pagination a {
+.pagination{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.pagination li{
+  margin: 5px;
+}
+ 
+.pagination li {
   text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+}
+.pagination li a{
+  text-decoration: none;
+  color: white;
+}
+
+.page-item.active{
   background-color: #088178;
   padding: 15px 20px;
   border-radius: 4px;

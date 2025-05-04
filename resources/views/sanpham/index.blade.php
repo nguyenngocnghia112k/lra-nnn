@@ -45,6 +45,12 @@
           {data: 'action', name: 'action'},
         ]
       });
-    })
+            // Tự động reload sau 1s nếu có flash message (vừa thêm xong)
+      @if (session('success') || session('status'))
+        setTimeout(() => {
+          table.ajax.reload();
+        }, 1000);
+      @endif
+    });
   </script>
 @endsection

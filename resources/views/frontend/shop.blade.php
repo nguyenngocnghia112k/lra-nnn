@@ -1,300 +1,49 @@
 @extends('flayouts.master')
 
-@section('noidung')
-    
-    
-                    
+@section('noidung')                  
            
 <section id="page-header">
       <h2>Trang sản phẩm</h2>
-      <p>Save more with coupons & up to 70% off!</p>
+      <p>Tiết kiệm nhiều hơn với phiếu giảm giá & giảm tới 70%!</p>
     </section>
-
-    <!---- feature product section -------->
     <section id="product1" class="section-p1">
+      <div class="danhmuc">
+        <div class="title">Danh mục sản phẩm </div>
+        <ul>
+        @foreach ($dmsps as $dmsp )
+          <li> <a href="{{ route('sanphamtheodanhmuc', $dmsp->slug) }}">{{mb_strtoupper( $dmsp->name) }}</a></li>
+        
+        @endforeach
+        </ul>
+      </div>
       <div class="pro-container">
-        <div class="pro" onclick="window.location.href='sproduct.html'">
-          <img src="{{asset('img/products/f1.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
+      @foreach ($sanphams as $sanpham)
+  <div class="pro" onclick="window.location.href='{{ route('chitietsanpham', $sanpham->slug) }}'">
+    @if ($sanpham->hinhanhs->first())
+      <img src="{{ asset($sanpham->hinhanhs->first()->tenanh) }}" alt="{{ $sanpham->name }}">
+    @else
+      <img src="{{ asset('upload/sanpham/default.jpg') }}" alt="No Image">
+    @endif
 
-        <div class="pro">
-          <img src="{{asset('img/products/f2.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
+    <div class="des">
+      <span>{{ $sanpham->danhmuc->name }}</span>
+      <h5>{{ $sanpham->name }}</h5>
+      <h5>Thương hiệu: {{ $sanpham->thuonghieu->name ?? 'Chưa có thương hiệu' }}</h5>
+      <div class="star">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <h4>{{ number_format($sanpham->price) }} VNĐ</h4>
+    </div>
+    <a href="#" class="themvaogio" data-product-id="{{ $sanpham->id }}" data-soluong="1"><i class="fa fa-shopping-cart cart"></i></a>
+  </div>
+@endforeach
 
-        <div class="pro">
-          <img src="{{asset('img/products/f3.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/f4.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/f5.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/f6.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/f7.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/f8.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/n1.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/n2.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/n3.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/n4.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/n5.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/n6.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/n7.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
-
-        <div class="pro">
-          <img src="{{asset('img/products/n8.jpg')}}" alt="" />
-          <div class="des">
-            <span>adidas</span>
-            <h5>Cartoon Astronaut T-Shirts</h5>
-            <div class="star">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-            </div>
-            <h4>$78</h4>
-          </div>
-          <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
-        </div>
       </div>
     </section>
-
-    <!-- pagination  -->
-    <section id="pagination" class="section-p1">
-      <a href="#">1</a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#"><i class="fa fa-long-arrow-alt-right"></i></a>
-    </section>
-    <!---- newletter section start -->
 
     <section id="newsletter" class="section-p1 section-m1">
       <div class="newstext">
@@ -311,5 +60,35 @@
     </section>
 
 @endsection
+
+@push('scripts')
+  <script>
+    const all_themvaogio = document.querySelectorAll('.themvaogio');
+    all_themvaogio.forEach( bt =>{
+      //alert('Click me');
+      bt.addEventListener('click', (e)=>{
+        e.preventDefault(); //bo su kien mac dinh cua the a
+        e.stopPropagation(); //bo su kien ben ngoai tac dong den(tu phan tu cha tro len)
+        //lay su gu len server
+        console.log(bt.dataset.productId);
+        console.log(bt.dataset.soluong);
+        //alert('Hoat dong')
+        //gui du lieu
+        axios.post("{{ route('themVaoGiohang') }}", {
+          sanpham_id: bt.dataset.productId,
+          soluong: bt.dataset.soluong
+
+        })
+        .then(response => {
+          console.log(response);
+          //cap nhat so luong trong gio hang
+          document.querySelector('#tongsoluong').innerText = response.data.tongsoluong;
+          
+        })
+      })
+    })
+  </script>
+
+@endpush
      
 

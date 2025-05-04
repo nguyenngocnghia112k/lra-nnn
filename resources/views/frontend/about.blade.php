@@ -13,27 +13,45 @@
     <section id="about-head" class="section-p1">
       <img src="img/about/a6.jpg" alt="" />
       <div>
-        <h2>Về chúng tôi</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-          dignissimos animi illum maxime fugiat quas omnis adipisci temporibus
-          vitae veritatis corporis minus veniam porro facilis numquam, sapiente
-          magni eveniet illo ea quasi nobis eaque corrupti et? Non, eius quidem.
-          Voluptatem corrupti ducimus ab eligendi quidem ipsam hic perferendis
-          porro quasi!Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-          Harum, itaque doloremque sapiente molestias excepturi voluptatibus.
-        </p>
-        <abbr title=""
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam,
-          possimus. Aliquam rerum repellendus recusandae suscipit molestias
-          quas, ipsum dolorem! Reprehenderit, quasi exercitationem iste quisquam
-          aliquid fugit voluptatibus! Quidem, veritatis id!</abbr
-        >
-        <marquee behavior="" direction="" bgcolor="#ccc" loop="-1">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-          molestias, rerum excepturi impedit corrupti obcaecati natus voluptatum
-          error adipisci architecto!
-        </marquee>
+      <section class="mission-vision container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>🎯 Tầm Nhìn</h2>
+            <p>Trở thành đơn vị dẫn đầu về giải pháp văn phòng và học tập tại Việt Nam.</p>
+          </div>
+          <div class="col-md-6">
+            <h2>🚀 Sứ Mệnh</h2>
+            <p>Cung cấp sản phẩm chất lượng, trải nghiệm mua sắm dễ dàng và dịch vụ hậu mãi tận tâm.</p>
+          </div>
+        </div>
+      </section>
+      <section class="core-values container">
+        <h2>💡 Giá Trị Cốt Lõi</h2>
+        <ul class="values-list">
+          <li>✔️ Chất lượng – Luôn đặt chất lượng lên hàng đầu.</li>
+          <li>✔️ Chân thành – Mọi giao tiếp đều minh bạch và tôn trọng.</li>
+          <li>✔️ Sáng tạo – Luôn đổi mới để cải thiện trải nghiệm khách hàng.</li>
+          <li>✔️ Đồng hành – Hỗ trợ và phát triển bền vững cùng đối tác.</li>
+        </ul>
+      </section>
+      <section class="team container">
+  <h2>👥 Đội Ngũ Của Chúng Tôi</h2>
+  <div class="row">
+    <div class="col-md-4 team-member">
+      
+      <h5>Nguyễn Ngọc Nghĩa </h5>
+      <p>CEO & Nhà Sáng Lập</p>
+    </div>
+    <div class="col-md-4 team-member">
+      <h5>Nguyễn Văn Công </h5>
+      <p>CTO</p>
+    </div>
+    <div class="col-md-4 team-member">
+      <h5>Đặng Thị Kim Ngân </h5>
+      <p>COO</p>
+    </div>
+  </div>
+</section>
       </div>
     </section>
 

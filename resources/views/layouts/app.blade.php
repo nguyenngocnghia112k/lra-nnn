@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Công ty ABC</title>
+  <title>Công N2</title>
   <!-- Custom fonts for this template-->
   <link href="{{ asset('https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css')}}" rel="stylesheet" type="text/css">
   <script src="{{ asset('https://use.fontawesome.com/releases/v6.3.0/js/all.js')}}" crossorigin="anonymous"></script>
@@ -14,6 +14,7 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /
   <!-- Custom styles for this template-->
   <link href="{{ asset('css/bstyle.css') }}" rel="stylesheet">
+  @stack('styles')
   
   <!-- jquery -->
   <script src="{{ asset('https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js') }}"></script>  

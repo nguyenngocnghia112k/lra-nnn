@@ -1,10 +1,10 @@
 <footer class="section-p1">
     <div class="col">
-        <img class="logo" src="{{asset('/img/logo.jpg')}}" alt="">
+        <img class="logo" src="{{asset('/logo.jpg')}}" alt="">
             <h4>Contact</h4>
-            <p><strong>Address:</strong> 562 Wellington Road, Street 32, San Francisco</p>
-            <p><strong>Phone:</strong> +01 2222 365/(+91)0123456789</p>
-            <p><strong>Hours:</strong> 10:00 - 18.00, Mon - Sat</p>
+            <p><strong>Address:</strong> 180 Cao Lỗ, Phường 4, Quận 8, Hồ Chí Minh, Việt Nam</p>
+            <p><strong>Phone:</strong> 0388672807</p>
+            <p><strong>Hours:</strong>Từ thứ 2 đến Chủ nhật - 9h sáng đến 18h tối</p>
 
             <div class="follow">
                 <h4>Follow Us</h4>

@@ -43,6 +43,14 @@ class UserController extends Controller
         return view('users.form', ['category' => $users]);
     }
 
+    public function __construct()
+{
+    $this->middleware('auth');
+    $this->middleware('role:admin'); // Nếu bạn dùng phân quyền theo role
+}
+
+
+
     public function save(Request $request)
     {
         $data = [

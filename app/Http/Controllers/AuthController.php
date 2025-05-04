@@ -40,29 +40,38 @@ class AuthController extends Controller
     }
 
     public function loginAction(Request $request)
-    {
-        Validator::make($request->all(), [
-            'email' => 'required|email',
-            'password' => 'required'
-        ])->validate();
+{
+    Validator::make($request->all(), [
+        'email' => 'required|email',
+        'password' => 'required'
+    ])->validate();
 
-        if (!Auth::attempt($request->only('email', 'password'), $request->boolean('remember'))) {
-            throw ValidationException::withMessages([
-                'email' => trans('auth.failed')
-            ]);
-        }
-
-        $request->session()->regenerate();
-
-        return redirect()->route('dashboard');
+    if (!Auth::attempt($request->only('email', 'password'), $request->boolean('remember'))) {
+        throw ValidationException::withMessages([
+            'email' => trans('auth.failed')
+        ]);
     }
 
-    public function logout(Request $request)
-    {
-        Auth::guard('web')->logout();
+    $request->session()->regenerate();
 
-        $request->session()->invalidate();
-
-        return redirect('/');
+    // Chuyển hướng tùy theo role
+    if (Auth::user()->role == 'admin') {
+        return redirect()->route('admin.dashboard');
+    } elseif (Auth::user()->role == 'users') {
+        return redirect()->route('index');  
     }
+    return redirect('/');
+}
+
+    
+
+public function logout(Request $request)
+{
+    Auth::guard('web')->logout(); // Đăng xuất người dùng
+    $request->session()->invalidate(); // Hủy tất cả session
+
+    // Chuyển hướng về trang login
+    return redirect()->route('login');
+}
+
 }
